@@ -6,13 +6,33 @@ html {
 }
 .wraper {
     display: flex;
-    max-width: 960px;
+    max-width: 1080px;
     background-color: #eaeaea;
-    margin: 15px auto;
+    margin: 10px auto;
+    height: 100vh;
 }
 .toDoApp {
     margin: 0 auto;
+    max-width: 800px;
 }
 h1 {
-   text-transform: uppercase;
+    margin-top: 40px;
+    padding-left: 20px;
+    text-transform: uppercase;
+}
+.toDo_list {
+    list-style: none;
+    padding-left: 5px;
+}
+.checked {
+    text-decoration: line-through;
+}
+.close {
+    text-decoration: none;
+    float: right;
+    margin-left: 10px;
+    cursor:pointer;
+}
+li {
+    margin-bottom: 4px;
 }

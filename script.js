@@ -11,6 +11,13 @@ list.addEventListener('click', function (ev) {
 let button = document.getElementById('toDo_button');
 button.addEventListener('click', newElement);
 
+let enterInput = document.getElementById('toDo_input');
+enterInput.addEventListener('keypress', function($) {
+        if ($.keyCode === 13) {
+                newElement();
+        }
+});
+
 function newElement() {
         let li = document.createElement('li');
         let inputValue = document.getElementById('toDo_input').value;
