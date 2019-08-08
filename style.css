@@ -1,0 +1,18 @@
+html {
+    box-sizing: border-box;
+}
+*, *:after, *:before {
+    box-sizing: inherit;
+}
+.wraper {
+    display: flex;
+    max-width: 960px;
+    background-color: #eaeaea;
+    margin: 15px auto;
+}
+.toDoApp {
+    margin: 0 auto;
+}
+h1 {
+   text-transform: uppercase;
+}

@@ -1,4 +1,3 @@
-/*jslint es6:true*/
 let list = document.querySelector('ul');
 list.addEventListener('click', function (ev) {
         if(ev.target.tagName === 'LI') {
@@ -23,7 +22,7 @@ function newElement() {
         }
         document.getElementById('toDo_input').value = "";
         let span = document.createElement('SPAN');
-        let txt = document.createTextNode("X");
+        let txt = document.createTextNode("  X");
         span.className = 'close';
         span.appendChild(txt);
         li.appendChild(span);
