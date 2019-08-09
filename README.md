@@ -1,1 +1,2 @@
-# Project-1
+# Simple todo list
+## Exercise: DOM Events
