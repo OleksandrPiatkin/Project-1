@@ -1,10 +1,16 @@
 import React from 'react';
 import './App.css';
-import BottomAppBar from './BottomAppBar';
+import BottomAppBar from '../components/BottomAppBar';
+import Header from '../components/Header';
+import ItemsList from '../components/ItemsList';
 
 function App() {
   return (
-    <BottomAppBar />
+    <div>
+      <Header />
+      <ItemsList />
+      <BottomAppBar />
+    </div>
   );
 }
 
