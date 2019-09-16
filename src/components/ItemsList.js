@@ -4,6 +4,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { makeStyles } from '@material-ui/core/styles';
+// import CloseIcon from '@material-ui/icons/Close';
 
 const todoListItem = [
     {
@@ -19,9 +20,6 @@ const todoListItem = [
 const useStyles = makeStyles(theme => ({
     list: {
         marginBottom: theme.spacing(2),
-    },
-    red: {
-        color: 'red'
     }
 }));
 
@@ -37,7 +35,8 @@ const classes = useStyles();
                     <React.Fragment key={id}>
                         <ListItem button >
                             <ListItemText>
-                                <span className={classes.red}>{content}</span>
+                                <span>{content}</span>
+                                {/* <CloseIcon /> */}
                             </ListItemText>
                         </ListItem>
                     </React.Fragment>

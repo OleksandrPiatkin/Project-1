@@ -4,7 +4,6 @@ import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
@@ -43,16 +42,13 @@ export default function FormDialog() {
                 <AddIcon />
             </Fab>
             <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-                <DialogTitle id="form-dialog-title">New to-do</DialogTitle>
+                <DialogTitle id="form-dialog-title">Add your item</DialogTitle>
                 <DialogContent>
-                    <DialogContentText>
-                        Add your item
-          </DialogContentText>
                     <TextField
                         autoFocus
                         margin="dense"
                         id="name"
-                        label="ToDo Item"
+                        label="todo"
                         type="text"
                         fullWidth
                     />
