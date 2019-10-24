@@ -21,22 +21,40 @@ class App extends Component {
     e.preventDefault();
 
     const newItem = {
-      id:this.state.id,
-      title:this.state.item
-    }
+      id: this.state.id,
+      title: this.state.item
+    };
 
-    const updatedItems =[...this.state.items,newItem];
+    const updatedItems = [...this.state.items,newItem];
 
     this.setState ({
       items: updatedItems,
       item: '',
       id: uuid(),
       editItem: false
-    })
+    }); 
+    
   };
+
   clearList = () => {
     this.setState({
       items:[]
+    });
+  };
+  handleDelete = id => {
+    const filteredItems = this.state.items.filter(item => item.id !== id)
+    this.setState({
+      items: filteredItems
+    });
+  };
+  handleEdit = id => {
+    const filteredItems = this.state.items.filter(item => item.id !== id)
+    
+    const selectedItem = this.state.items.find(item => item.id === id);
+
+    this.setState({
+      items: filteredItems,
+      item: selectedItem.title
     })
   }
   render() {
@@ -52,7 +70,9 @@ class App extends Component {
             />
             <TodoList
               items={this.state.items}
-              clearList={this.clearList} 
+              clearList={this.clearList}
+              handleDelete={this.handleDelete}
+              handleEdit={this.handleEdit}
             />
           </div>
         </div>
