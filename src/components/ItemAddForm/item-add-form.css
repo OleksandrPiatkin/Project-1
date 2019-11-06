@@ -1,0 +1,7 @@
+.add-form-input {
+    width: auto;
+    flex-grow: 1;
+    margin: 4px 3px;
+    padding: 3px 0 6.5px 0;
+    border-radius: 4px;
+}
