@@ -1,6 +1,11 @@
+.top-panel {
+    margin-bottom: 1em;
+}
+
 .search-input {
     width: auto;
     flex-grow: 1;
     margin: 4px 3px;
     border-radius: 4px;
+    padding-left: 0.5em;
 }
